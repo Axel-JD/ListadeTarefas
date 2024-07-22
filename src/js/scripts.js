@@ -50,19 +50,31 @@ criarItemDeAtividade = (atividade) => {
 
     input = input + '>'
 
+    const formatar = formatador(atividade.data);
+
     return `<div>
 
         ${input}
 
         <span>${atividade.nome}</span>
 
-        <time datetime="">${atividade.data}</time>
+        <time datetime="">
+        ${formatar.dia.semana.longo},
+        dia ${formatar.dia.numerico}
+        de ${formatar.mes}
+        as ${formatar.hora}h.
+        </time>
 
         </div>`
 } //função criada
 
+const atualizarListaDeAtividades = () => {
 
 const section = document.querySelector('section') //pegando as informações via nome de tag
+
+if(atividades.length == 0) {
+    section.innerHTML = "<p>Nenhuma atividade cadastrada!</p>"
+}
 
 for(let atividade of atividades) {
 
@@ -70,5 +82,32 @@ for(let atividade of atividades) {
 
 }
 
+}
+
+atualizarListaDeAtividades ()
+
+const salvarAtividade = (event) => {
+    event.preventDefault()
+
+    const dadosDoFormulario = new FormData(event.target)
+
+    const nome = dadosDoFormulario.get('atividade')
+
+    const dia = dadosDoFormulario.get('dia')
+
+    const hora = dadosDoFormulario.get('hora')
+
+    const data = `${dia} ${hora}`
 
 
+    const novaAtividade = {
+        nome,
+        data,
+        finalizada: false
+    }
+
+    atividades = [novaAtividade, ...atividades]
+
+    atualizarListaDeAtividades()
+
+}
