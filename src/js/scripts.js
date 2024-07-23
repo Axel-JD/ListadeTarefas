@@ -20,7 +20,7 @@ const atividade = {
     finalizada: false
 }
 
-const atividades = [
+let atividades = [
     atividade,
     {
         nome: "Jantar",
@@ -72,6 +72,8 @@ const atualizarListaDeAtividades = () => {
 
 const section = document.querySelector('section') //pegando as informações via nome de tag
 
+section.innerHTML=''
+
 if(atividades.length == 0) {
     section.innerHTML = "<p>Nenhuma atividade cadastrada!</p>"
 }
@@ -111,3 +113,5 @@ const salvarAtividade = (event) => {
     atualizarListaDeAtividades()
 
 }
+
+
