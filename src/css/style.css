@@ -1,0 +1,231 @@
+html {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color:  #09090B;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 40px;
+}
+
+/* Local fixo */
+
+#local {
+    width: 280px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin: 0;
+    border: 1px solid #1E1E1E;
+    background-color: #18181B;
+    color: white;
+    border-radius: 8px;
+}
+
+#local h4 {
+    font-size: 14px;
+}
+
+#local img {
+    width: 20px;
+    height: 20px;
+    padding-left: 16px;
+}
+
+/* Lista com atividade, data e horario */
+
+.lista {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 32px;
+}
+
+.titulo {
+    width: 280px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin: 0;
+    border: 1px solid #1E1E1E;
+    background-color: #09090B;
+    border-radius: 8px;
+}
+
+.titulo img {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding-left:16px ;
+}
+
+.titulo input {
+    height: 20px;
+    border: transparent;
+    background-color: transparent;
+    line-height: 22px;
+    margin: 0;
+}
+
+.data {
+    width: 280px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin: 0;
+    border: 1px solid #1E1E1E;
+    background-color: #09090B;
+    border-radius: 8px;
+}
+
+.data input {
+    color: white;
+    background-color: transparent;
+    border: transparent;
+    background: transparent;
+}
+
+.data img {
+    padding-left: 16px;
+}
+
+.tempo {
+    width: 280px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin: 0;
+    border: 1px solid #1E1E1E;
+    background-color: #09090B;
+    border-radius: 8px;
+}
+
+.tempo input {
+    color: white;
+    background-color: transparent;
+    border: transparent;
+    background: transparent;
+}
+
+.tempo img {
+    padding-left: 16px;
+}
+
+::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+.lista button {
+    width: 280px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #BEF264;
+    border-radius: 8px;
+    background-color: #BEF264;
+    line-height: 8px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/* Lista onde o usuário pode mecher */
+.atividadeListada {
+    background-color: #09090B;
+    margin-left: 32px;
+    width: 648px;
+    height: 688px;
+}
+
+.infoNome {
+    color: white;
+}
+
+.infoData {
+    color: #A1A1AA;
+}
+
+h1 {
+    color: white;
+    padding-left: 20px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* checkbox */
+
+input, select {
+    all: unset;
+  }
+
+  section input[type="checkbox"] {
+    position: absolute;
+    inset: 0;
+  }
+
+  section .inicioPedido {
+    position: relative;
+    padding: 10px 16px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  section .inicioPedido:has(:checked) .active,
+  section .inicioPedido .inactive {
+    display: block;
+  }
+  
+  section .inicioPedido:has(:checked) .inactive,
+  section .inicioPedido .active {
+    display: none;
+  }
+  
+  section .inicioPedido > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+/* checkbox fim */
+  
+.infoTotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #18181B;
+    border-radius: 12px;
+    background-color: #18181B;
+    padding-right: 16px;
+}
+
+.inicioPedido {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.classDoSvg {
+    display: flex;
+    margin-right: 16px;
+}
