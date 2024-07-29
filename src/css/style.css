@@ -230,3 +230,65 @@ input, select {
     display: flex;
     margin-right: 16px;
 }
+
+@media (max-width: 425px){
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: 8px;
+    }
+
+    form {
+        margin-bottom: 60px;
+    }   
+
+    .atividadeListada {
+        justify-content: center;
+        text-align: center;
+        padding: 0 6px;
+    }
+
+    form {
+        width: 100%;
+        margin: 20px 6px;
+    }
+
+    .titulo {
+        width: 100%;
+        height: 64px;
+        margin: 0;
+    }
+
+    .data {
+        width: 100%;
+        height: 64px;
+        margin: 0;
+    }
+
+    .tempo {
+        width: 100%;
+        height: 64px;
+        margin: 0;
+    }
+
+    #local {
+        width: 100%;
+        height: 64px;
+        margin: 0;
+    }
+
+    .lista button {
+        width: 100%;
+        height: 64px;
+        margin: 0;
+    }
+
+    .atividadeListada {
+        width: 100%;
+        margin-left: 0;
+        padding: 0;
+    }
+
+}
